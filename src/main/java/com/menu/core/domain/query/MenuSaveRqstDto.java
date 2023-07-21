@@ -20,12 +20,12 @@ public class MenuSaveRqstDto {
   )
   private Long menuSeq;
 
-//  @Schema(
-//      description = "메뉴 아이디",
-//      example = "apple",
-//      required = true
-//  )
-//  private String menuId;
+  @Schema(
+      description = "메뉴 분류",
+      example = "homemade",
+      required = true
+  )
+  private String menuId;
 
   @Schema(
       description = "주 메뉴",
@@ -36,7 +36,7 @@ public class MenuSaveRqstDto {
   
   @Schema(
     description = "1인분 당 가격",
-    example = "W",
+    example = "7000",
     required = true
   )
   private Integer price;

@@ -45,7 +45,7 @@ public class MenuController {
     public Menu menuInsert(
             @Parameter(in = ParameterIn.QUERY) MenuSaveRqstDto menuSaveRqstDto
     ) throws Exception{
-        log.info("Test Start");
+        log.info("Insert Test Start");
 
         try {
             Menu menu = commandHandler.save(menuSaveRqstDto);
@@ -57,37 +57,37 @@ public class MenuController {
             throw new Exception();
         }
     }
-//
-//    @PostMapping( "/update")
-//    public Menu menuUpdate(
-//            @Parameter(in = ParameterIn.QUERY) MenuSaveRqstDto menuSaveRqstDto
-//    ) throws Exception{
-//        log.info("Test Start");
-//
-//        try {
-//            Menu menu = commandHandler.update(menuSaveRqstDto);
-//
-//            return menu;
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            throw new Exception();
-//        }
-//    }
-//
-//    @PostMapping( "/delete")
-//    public void menuDelete(
-//            @Parameter(in = ParameterIn.QUERY) MenuSaveRqstDto menuSaveRqstDto
-//    ) throws Exception{
-//        log.info("Test Start");
-//
-//        try {
-//            commandHandler.delete(menuSaveRqstDto);
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            throw new Exception();
-//        }
-//    }
+
+    @PostMapping( "/update")
+    public Menu menuUpdate(
+            @Parameter(in = ParameterIn.QUERY) MenuSaveRqstDto menuSaveRqstDto
+    ) throws Exception{
+        log.info("Update Test Start");
+
+        try {
+            Menu menu = commandHandler.update(menuSaveRqstDto);
+
+            return menu;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception();
+        }
+    }
+
+    @PostMapping( "/delete")
+    public void menuDelete(
+            @Parameter(in = ParameterIn.QUERY) MenuSaveRqstDto menuSaveRqstDto
+    ) throws Exception{
+        log.info("Delete Test Start");
+
+        try {
+            commandHandler.delete(menuSaveRqstDto);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception();
+        }
+    }
 
 }
